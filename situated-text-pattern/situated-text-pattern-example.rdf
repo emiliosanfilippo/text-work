@@ -468,6 +468,19 @@ This file includes an example for presentation/testing purposes.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#ALD1"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#ALD2"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#ALD3"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#ALD4"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#PoesiaEdErrore"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#PoesieScelte1939-1973"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#UnaVoltaPerSempre"/>
+            <rdf:Description rdf:about="http://www.textualpatterns.org/data#VersiPrimiEDistanti"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.textualpatterns.org/data#Allinsegnadelpescedoro"/>
             <rdf:Description rdf:about="http://www.textualpatterns.org/data#Einaudi"/>
             <rdf:Description rdf:about="http://www.textualpatterns.org/data#Feltrinelli"/>
