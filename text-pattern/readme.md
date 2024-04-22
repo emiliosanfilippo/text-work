@@ -17,7 +17,9 @@ SELECT ?poem ?variant ?titleCollection ?publisherName ?pubYear WHERE {
         :hasPublicationYear ?pubYear} 
 ```
 Result of query:
+
 ![Local Image](text-query-result.png)
 
 Example of RDF graph (it shows two texts, one for the full-variant, one for the shortened-variant, with the corresponding publishing situations) 
+
 ![Local Image](text-graph-example.png)
