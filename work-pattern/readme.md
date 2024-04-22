@@ -22,8 +22,10 @@ SELECT ?poemWork ?poemText ?variant ?titleCollection ?publisherName ?pubYear WHE
 
 ```
 Result of query:
+
 ![Local Image](work-query-result.png)
 
 
 Example of RDF graph (it shows multiple texts classified by a single work) 
+
 ![Local Image](work-example-graph.png)
