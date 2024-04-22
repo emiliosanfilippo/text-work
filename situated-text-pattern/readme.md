@@ -15,3 +15,5 @@ SELECT ?poem ?variantType?collectionTitle ?publisherName ?pbYear WHERE {
                 :hasPublisher/rdfs:label ?publisherName;
                 :hasPublicationYear  ?pbYear}
 ```
+Result of query:
+![Local Image](situated-text-query-result.png)
