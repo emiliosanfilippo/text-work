@@ -1,5 +1,5 @@
 ## Example of SPARQL query
-tested on a local instatiation of GraphDB by Ontotext (with reasoning set to OWL2 QL)
+(tested on a local instatiation of GraphDB by Ontotext - with reasoning set to OWL2 QL)
 
 ```sparql
 PREFIX : <http://www.textualpatterns.org#>
@@ -15,10 +15,13 @@ SELECT ?poem ?variantType?collectionTitle ?publisherName ?pbYear WHERE {
                 :hasPublisher/rdfs:label ?publisherName;
                 :hasPublicationYear  ?pbYear}
 ```
-Result of query:
+### Result of query:
 
 ![Local Image](situated-text-query-result.png)
 
-Example of RDF graph (it shows two texts, one for the full-variant, one for the shortened-variant)
+The query can be easily made more specific to retrieve the situated texts by a specific author (object property :hasAuthor) or publisher, just to make some examples.
+
+### Example of RDF graph 
+(it shows two texts, one for the full-variant, one for the shortened-variant)
 
 ![Local Image](situated-text-graph-example.png)
