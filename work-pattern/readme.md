@@ -1,5 +1,5 @@
 ## Example of SPARQL query
-tested on a local instatiation of GraphDB by Ontotext (with reasoning set to OWL2 QL)
+(tested on a local instatiation of GraphDB by Ontotext - with reasoning set to OWL2 QL)
 
 ```sparql
 PREFIX : <http://www.textualpatterns.org#>
@@ -21,11 +21,13 @@ SELECT ?poemWork ?poemText ?variant ?titleCollection ?publisherName ?pubYear WHE
       }
 
 ```
-Result of query:
+### Result of query:
 
 ![Local Image](work-query-result.png)
 
+As for the previous cases, more specific queries can be asked by, e.g., restricting the author or publisher to specific instances.
 
-Example of RDF graph (it shows multiple texts classified by a single work) 
+### Example of RDF graph 
+(it shows multiple texts classified by a single work) 
 
 ![Local Image](work-example-graph.png)
