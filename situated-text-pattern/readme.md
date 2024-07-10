@@ -5,10 +5,10 @@
 PREFIX : <http://www.textualpatterns.org#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?poem ?variantType?collectionTitle ?publisherName ?pbYear WHERE {
+SELECT ?poem ?versionType?collectionTitle ?publisherName ?pbYear WHERE {
     ?poem a :SituatedText; 
           :hasTitle "Al di là della speranza";
-          :hasVariantType ?variantType;
+          :hasVersionType ?versionType;
           :includedIn ?collection.
     ?collection a :SituatedText;
                 :hasTitle ?collectionTitle;
@@ -22,6 +22,6 @@ SELECT ?poem ?variantType?collectionTitle ?publisherName ?pbYear WHERE {
 The query can be easily made more specific to retrieve the situated texts by a specific author (object property :hasAuthor) or publisher, just to make some examples.
 
 ### Example of RDF graph 
-(it shows two texts, one for the full-variant, one for the shortened-variant)
+(it shows two texts, one for the full-version, one for the shortened-version)
 
 ![Local Image](situated-text-graph-example.png)
