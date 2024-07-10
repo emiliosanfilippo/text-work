@@ -5,12 +5,12 @@
 PREFIX : <http://www.textualpatterns.org#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?poemWork ?poemText ?variant ?titleCollection ?publisherName ?pubYear WHERE { 
+SELECT ?poemWork ?poemText ?version ?titleCollection ?publisherName ?pubYear WHERE { 
 	?poemWork a :DocumentaryWork; 
            :hasTitle "Al di là della speranza";
            :groups ?poemText.
     ?poemText a :Text;
-          :hasVariantType ?variant;
+          :hasVersionType ?version;
           :includedIn ?collectionText.
     ?collectionText a :Text;
         :hasTitle ?titleCollection;
