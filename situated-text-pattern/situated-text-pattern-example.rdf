@@ -278,7 +278,7 @@ This file includes an example for presentation/testing purposes.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.textualpatterns.org#SituatedText"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>Variant Type</rdfs:label>
+        <rdfs:label>Version Type</rdfs:label>
     </owl:Class>
     
 
