@@ -18,7 +18,7 @@ SELECT ?poem ?version ?titleCollection ?publisherName ?pubYear WHERE {
 ```
 ### Result of query:
 
-![Local Image](text-graph-example.png)
+![Local Image](text-query-result.png)
 
 The query can be easily made more specific to retrieve the situated texts by a specific author (object property :hasAuthor) or publisher, just to make some examples. Differently from the situated-text-pattern, note that information about the publisher is here represented at the level of the publication situation.
 
