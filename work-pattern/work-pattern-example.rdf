@@ -139,13 +139,13 @@ emilio.sanfilippo</rdfs:comment>
     
 
 
-    <!-- http://www.textualpatterns.org#hasVariantType -->
+    <!-- http://www.textualpatterns.org#hasVersionType -->
 
-    <owl:ObjectProperty rdf:about="http://www.textualpatterns.org#hasVariantType">
-        <owl:inverseOf rdf:resource="http://www.textualpatterns.org#variantTypeOf"/>
+    <owl:ObjectProperty rdf:about="http://www.textualpatterns.org#hasVersionType">
+        <owl:inverseOf rdf:resource="http://www.textualpatterns.org#versionTypeOf"/>
         <rdfs:domain rdf:resource="http://www.textualpatterns.org#Text"/>
-        <rdfs:range rdf:resource="http://www.textualpatterns.org#VariantType"/>
-        <rdfs:label>has variant type</rdfs:label>
+        <rdfs:range rdf:resource="http://www.textualpatterns.org#VersionType"/>
+        <rdfs:label>has version type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -226,11 +226,12 @@ emilio.sanfilippo</rdfs:comment>
     
 
 
-    <!-- http://www.textualpatterns.org#variantTypeOf -->
+    <!-- http://www.textualpatterns.org#versionTypeOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.textualpatterns.org#variantTypeOf">
-        <rdfs:domain rdf:resource="http://www.textualpatterns.org#VariantType"/>
+    <owl:ObjectProperty rdf:about="http://www.textualpatterns.org#versionTypeOf">
+        <rdfs:domain rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:range rdf:resource="http://www.textualpatterns.org#Text"/>
+        <rdfs:comment>version type of</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -311,7 +312,7 @@ emilio.sanfilippo</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Publisher"/>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Situation"/>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Text"/>
-        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VariantType"/>
+        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:label>Documentary Work</rdfs:label>
     </owl:Class>
     
@@ -323,7 +324,7 @@ emilio.sanfilippo</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Publisher"/>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Situation"/>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Text"/>
-        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VariantType"/>
+        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:label>Person</rdfs:label>
     </owl:Class>
     
@@ -373,7 +374,7 @@ emilio.sanfilippo</rdfs:comment>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Situation"/>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Text"/>
-        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VariantType"/>
+        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:label>Publisher</rdfs:label>
     </owl:Class>
     
@@ -395,7 +396,7 @@ emilio.sanfilippo</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.textualpatterns.org#Text"/>
-        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VariantType"/>
+        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:label>Situation</rdfs:label>
     </owl:Class>
     
@@ -424,8 +425,8 @@ emilio.sanfilippo</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.textualpatterns.org#hasVariantType"/>
-                <owl:allValuesFrom rdf:resource="http://www.textualpatterns.org#VariantType"/>
+                <owl:onProperty rdf:resource="http://www.textualpatterns.org#hasVersionType"/>
+                <owl:allValuesFrom rdf:resource="http://www.textualpatterns.org#VersionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -440,22 +441,22 @@ emilio.sanfilippo</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.textualpatterns.org#Text"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VariantType"/>
+        <owl:disjointWith rdf:resource="http://www.textualpatterns.org#VersionType"/>
         <rdfs:label>Text</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.textualpatterns.org#VariantType -->
+    <!-- http://www.textualpatterns.org#VersionType -->
 
-    <owl:Class rdf:about="http://www.textualpatterns.org#VariantType">
+    <owl:Class rdf:about="http://www.textualpatterns.org#VersionType">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.textualpatterns.org#variantTypeOf"/>
+                <owl:onProperty rdf:resource="http://www.textualpatterns.org#versionTypeOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.textualpatterns.org#Text"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>Variant Type</rdfs:label>
+        <rdfs:label>Version Type</rdfs:label>
     </owl:Class>
     
 
@@ -471,21 +472,19 @@ emilio.sanfilippo</rdfs:comment>
     
 
 
-    <!-- http://www.textualpatterns.org#Full-variant -->
+    <!-- http://www.textualpatterns.org#Full-version -->
 
-    <owl:NamedIndividual rdf:about="http://www.textualpatterns.org#Full-variant">
-        <rdf:type rdf:resource="http://www.textualpatterns.org#VariantType"/>
-        <owl:differentFrom rdf:resource="http://www.textualpatterns.org#Shortened-variant"/>
-        <rdfs:comment>Example of variant type for situated texts</rdfs:comment>
+    <owl:NamedIndividual rdf:about="http://www.textualpatterns.org#Full-version">
+        <rdf:type rdf:resource="http://www.textualpatterns.org#VersionType"/>
+        <owl:differentFrom rdf:resource="http://www.textualpatterns.org#Shortened-version"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.textualpatterns.org#Shortened-variant -->
+    <!-- http://www.textualpatterns.org#Shortened-version -->
 
-    <owl:NamedIndividual rdf:about="http://www.textualpatterns.org#Shortened-variant">
-        <rdf:type rdf:resource="http://www.textualpatterns.org#VariantType"/>
-        <rdfs:comment>Example of variant type for situated texts</rdfs:comment>
+    <owl:NamedIndividual rdf:about="http://www.textualpatterns.org#Shortened-version">
+        <rdf:type rdf:resource="http://www.textualpatterns.org#VersionType"/>
     </owl:NamedIndividual>
     
 
@@ -495,7 +494,7 @@ emilio.sanfilippo</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.textualpatterns.org/data#ALD12">
         <rdf:type rdf:resource="http://www.textualpatterns.org#Text"/>
         <groupedBy rdf:resource="http://www.textualpatterns.org/data#W1"/>
-        <hasVariantType rdf:resource="http://www.textualpatterns.org#Full-variant"/>
+        <hasVersionType rdf:resource="http://www.textualpatterns.org#Full-version"/>
         <includedIn rdf:resource="http://www.textualpatterns.org/data#PoesiaEdErrore"/>
         <includedIn rdf:resource="http://www.textualpatterns.org/data#VersiPrimiEDistanti"/>
     </owl:NamedIndividual>
@@ -507,7 +506,7 @@ emilio.sanfilippo</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.textualpatterns.org/data#ALD34">
         <rdf:type rdf:resource="http://www.textualpatterns.org#Text"/>
         <groupedBy rdf:resource="http://www.textualpatterns.org/data#W1"/>
-        <hasVariantType rdf:resource="http://www.textualpatterns.org#Shortened-variant"/>
+        <hasVersionType rdf:resource="http://www.textualpatterns.org#Shortened-version"/>
         <includedIn rdf:resource="http://www.textualpatterns.org/data#PoesieScelte1939-1973"/>
         <includedIn rdf:resource="http://www.textualpatterns.org/data#UnaVoltaPerSempre"/>
         <hasTitle>Al di là della speranza</hasTitle>
